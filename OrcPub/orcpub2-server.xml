@@ -1,0 +1,139 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>orcpub2-server</Name>
+  <Repository>orcpub/orcpub:latest</Repository>
+  <Registry>https://hub.docker.com/r/orcpub/orcpub/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://hub.docker.com/r/orcpub/orcpub/</Support>
+  <Project>https://github.com/Orcpub/orcpub</Project>
+  <Overview>This is a container for the Orcpub code used on Dungeon Master's Vault. This container requires the use of a Datomic-free server and an nNginx proxy. With the proper configuration of the Nnginx proxy, you can add your own homebrew directly onto the server so that it is accessible to all users. (You must provide this content.) &#xD;
+&#xD;
+In order to set this up, some manual work is required. (This is due to my lack of familiarity with setting up docker.) Two additional containers are needed. An Nginx docker and a datomic docker. Though you can use your preferred images, I will only be covering what I use.&#xD;
+&#xD;
+Datomic:&#xD;
+    akiel/datomic-free&#xD;
+An xml template is available at: https://github.com/mrcory/Unraiad_Docker_Templates/tree/master/OrcPub&#xD;
+&#xD;
+Nginx:&#xD;
+    jlesage/nginx-proxy-manager (available from the community app)&#xD;
+For homebrew content add the below line to the Advanced tab when creating your proxy.&#xD;
+&#xD;
+"location /homebrew.orcbrew {root /usr/share/nginx/html/homebrew; }"&#xD;
+&#xD;
+You will then need to add your homebrew to wherever you map "/usr/share/nginx/html/homebrew" as a file named "homebrew.orcbrew"&#xD;
+&#xD;
+&#xD;
+Standalone version of orcpub, as a java jar   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
+  <Category/>
+  <WebUI/>
+  <TemplateURL/>
+  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1598299535</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This is a container for the Orcpub code used on Dungeon Master's Vault. This container requires the use of a Datomic-free server and an nNginx proxy. With the proper configuration of the Nnginx proxy, you can add your own homebrew directly onto the server so that it is accessible to all users. (You must provide this content.) &#xD;
+&#xD;
+In order to set this up, some manual work is required. (This is due to my lack of familiarity with setting up docker.) Two additional containers are needed. An Nginx docker and a datomic docker. Though you can use your preferred images, I will only be covering what I use.&#xD;
+&#xD;
+Datomic:&#xD;
+    akiel/datomic-free&#xD;
+An xml template is available at: https://github.com/mrcory/Unraiad_Docker_Templates/tree/master/OrcPub&#xD;
+&#xD;
+Nginx:&#xD;
+    jlesage/nginx-proxy-manager (available from the community app)&#xD;
+For homebrew content add the below line to the Advanced tab when creating your proxy.&#xD;
+&#xD;
+"location /homebrew.orcbrew {root /usr/share/nginx/html/homebrew; }"&#xD;
+&#xD;
+You will then need to add your homebrew to wherever you map "/usr/share/nginx/html/homebrew" as a file named "homebrew.orcbrew"&#xD;
+&#xD;
+&#xD;
+Standalone version of orcpub, as a java jar   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>7980</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>8891</HostPort>
+        <ContainerPort>8890</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data/>
+  <Environment>
+    <Variable>
+      <Value/>
+      <Name>EMAIL_SERVER_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>EMAIL_ACCESS_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>EMAIL_SECRET_KEY</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>587</Value>
+      <Name>EMAIL_SERVER_PORT</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EMAIL_SSL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>false</Value>
+      <Name>EMAIL_TLS</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>datomic:free://&lt;DATABASE_URL&gt;:4334/orcpub?password=&lt;DATABASE_PASSWORD&gt;</Value>
+      <Name>DATOMIC_URL</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>admin</Value>
+      <Name>ADMIN_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>datomic</Value>
+      <Name>DATOMIC_PASSWORD</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value>8890</Value>
+      <Name>PORT</Name>
+      <Mode/>
+    </Variable>
+  </Environment>
+  <Labels/>
+  <Config Name="SMTP Server" Target="EMAIL_SERVER_URL" Default="" Mode="" Description="Container Variable: EMAIL_SERVER_URL:" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SMTP Username" Target="EMAIL_ACCESS_KEY" Default="" Mode="" Description="Container Variable: EMAIL_ACCESS_KEY" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SMTP Password" Target="EMAIL_SECRET_KEY" Default="" Mode="" Description="Password for the user" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="SMTP Port" Target="EMAIL_SERVER_PORT" Default="" Mode="" Description="Mail server port" Type="Variable" Display="always" Required="false" Mask="false">587</Config>
+  <Config Name="Email SSL" Target="EMAIL_SSL" Default="" Mode="" Description="Should SSL be used? Gmail requires this." Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Email TLS" Target="EMAIL_TLS" Default="" Mode="" Description="Should TLS be used? " Type="Variable" Display="always" Required="false" Mask="false">false</Config>
+  <Config Name="Datomic URL" Target="DATOMIC_URL" Default="datomic:free://&amp;lt;DATABASE_URL&amp;gt;:4334/orcpub?password=&amp;lt;DATABASE_PASSWORD&amp;gt;" Mode="" Description="Url for the database.&#13;&#10;&#13;&#10;Edit the &amp;lt;DATABASE_URL&amp;gt; and &amp;lt;DATABASE_PASSWORD&amp;gt;" Type="Variable" Display="always" Required="true" Mask="false">datomic:free://&lt;DATABASE_URL&gt;:4334/orcpub?password=&lt;DATABASE_PASSWORD&gt;</Config>
+  <Config Name="Datomic Admin Password" Target="ADMIN_PASSWORD" Default="" Mode="" Description="The datomic admin password (should be diffrent than the DATOMIC_PASSWORD)" Type="Variable" Display="always" Required="true" Mask="true">admin</Config>
+  <Config Name="Datomic Password" Target="DATOMIC_PASSWORD" Default="" Mode="" Description="The datomic application password" Type="Variable" Display="always" Required="true" Mask="true">datomic</Config>
+  <Config Name="Host Port 1" Target="80" Default="" Mode="tcp" Description="Container Port: 80" Type="Port" Display="always" Required="false" Mask="false">7980</Config>
+  <Config Name="Host Port 2" Target="8890" Default="" Mode="tcp" Description="Container Port: 8890" Type="Port" Display="always" Required="false" Mask="false">8891</Config>
+  <Config Name="Server Internal Port" Target="PORT" Default="8890" Mode="" Description="Container Variable: PORT" Type="Variable" Display="always" Required="false" Mask="false">8890</Config>
+</Container>
