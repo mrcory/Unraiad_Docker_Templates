@@ -30,11 +30,11 @@ Standalone version of orcpub, as a java jar   Converted By Community Application
   <Category/>
   <WebUI/>
   <TemplateURL/>
-  <Icon>/plugins/dynamix.docker.manager/images/question.png</Icon>
+  <Icon>https://raw.githubusercontent.com/mrcory/Unraiad_Docker_Templates/master/orc-head.svg</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1598304654</DateInstalled>
+  <DateInstalled>1598305126</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>This is a container for the Orcpub code used on Dungeon Master's Vault. This container requires the use of a Datomic-free server and an nNginx proxy. With the proper configuration of the Nnginx proxy, you can add your own homebrew directly onto the server so that it is accessible to all users. (You must provide this content.) &#xD;
@@ -119,7 +119,7 @@ Standalone version of orcpub, as a java jar   Converted By Community Application
     </Variable>
     <Variable>
       <Value/>
-      <Name>EMAIL_ERRORS_TO</Name>
+      <Name>ALT_HOST</Name>
       <Mode/>
     </Variable>
   </Environment>
@@ -133,7 +133,7 @@ Standalone version of orcpub, as a java jar   Converted By Community Application
   <Config Name="Datomic URL" Target="DATOMIC_URL" Default="datomic:free://&amp;lt;DATABASE_URL&amp;gt;:4334/orcpub?password=&amp;lt;DATABASE_PASSWORD&amp;gt;" Mode="" Description="Url for the database.&#13;&#10;&#13;&#10;Edit the &amp;lt;DATABASE_URL&amp;gt; and &amp;lt;DATABASE_PASSWORD&amp;gt;" Type="Variable" Display="always" Required="true" Mask="false">datomic:free://&lt;DATABASE_URL&gt;:4334/orcpub?password=&lt;DATABASE_PASSWORD&gt;</Config>
   <Config Name="Datomic Admin Password" Target="ADMIN_PASSWORD" Default="" Mode="" Description="The datomic admin password (should be diffrent than the DATOMIC_PASSWORD)" Type="Variable" Display="always" Required="true" Mask="true">admin</Config>
   <Config Name="Datomic Password" Target="DATOMIC_PASSWORD" Default="" Mode="" Description="The datomic application password" Type="Variable" Display="always" Required="true" Mask="true">datomic</Config>
-  <Config Name="Host Port 2" Target="8890" Default="" Mode="tcp" Description="Container Port: 8890" Type="Port" Display="always" Required="false" Mask="false">8891</Config>
+  <Config Name="External Port" Target="8890" Default="" Mode="tcp" Description="Container Port: 8890" Type="Port" Display="always" Required="false" Mask="false">8891</Config>
   <Config Name="Server Internal Port" Target="PORT" Default="8890" Mode="" Description="Container Variable: PORT" Type="Variable" Display="always" Required="false" Mask="false">8890</Config>
-  <Config Name="Host Key 11" Target="EMAIL_ERRORS_TO" Default="" Mode="" Description="Container Variable: EMAIL_ERRORS_TO" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Datomic host IP address" Target="ALT_HOST" Default="" Mode="" Description="Container Variable: ALT_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
