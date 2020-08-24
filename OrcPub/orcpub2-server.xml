@@ -34,7 +34,7 @@ Standalone version of orcpub, as a java jar   Converted By Community Application
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1598304556</DateInstalled>
+  <DateInstalled>1598304654</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>This is a container for the Orcpub code used on Dungeon Master's Vault. This container requires the use of a Datomic-free server and an nNginx proxy. With the proper configuration of the Nnginx proxy, you can add your own homebrew directly onto the server so that it is accessible to all users. (You must provide this content.) &#xD;
@@ -117,6 +117,11 @@ Standalone version of orcpub, as a java jar   Converted By Community Application
       <Name>PORT</Name>
       <Mode/>
     </Variable>
+    <Variable>
+      <Value/>
+      <Name>EMAIL_ERRORS_TO</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="SMTP Server" Target="EMAIL_SERVER_URL" Default="" Mode="" Description="Container Variable: EMAIL_SERVER_URL:" Type="Variable" Display="always" Required="false" Mask="false"/>
@@ -130,4 +135,5 @@ Standalone version of orcpub, as a java jar   Converted By Community Application
   <Config Name="Datomic Password" Target="DATOMIC_PASSWORD" Default="" Mode="" Description="The datomic application password" Type="Variable" Display="always" Required="true" Mask="true">datomic</Config>
   <Config Name="Host Port 2" Target="8890" Default="" Mode="tcp" Description="Container Port: 8890" Type="Port" Display="always" Required="false" Mask="false">8891</Config>
   <Config Name="Server Internal Port" Target="PORT" Default="8890" Mode="" Description="Container Variable: PORT" Type="Variable" Display="always" Required="false" Mask="false">8890</Config>
+  <Config Name="Host Key 11" Target="EMAIL_ERRORS_TO" Default="" Mode="" Description="Container Variable: EMAIL_ERRORS_TO" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
