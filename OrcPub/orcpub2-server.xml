@@ -25,6 +25,7 @@ For homebrew content add the below line to the Advanced tab when creating your p
 &#xD;
 You will then need to add your homebrew to wherever you map "/usr/share/nginx/html/homebrew" as a file named "homebrew.orcbrew"&#xD;
 &#xD;
+Find my template on Github. https://github.com/mrcory/Unraiad_Docker_Templates&#xD;
 &#xD;
 Standalone version of orcpub, as a java jar   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
   <Category/>
@@ -34,7 +35,7 @@ Standalone version of orcpub, as a java jar   Converted By Community Application
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
-  <DateInstalled>1598305352</DateInstalled>
+  <DateInstalled>1598305471</DateInstalled>
   <DonateText/>
   <DonateLink/>
   <Description>This is a container for the Orcpub code used on Dungeon Master's Vault. This container requires the use of a Datomic-free server and an nNginx proxy. With the proper configuration of the Nnginx proxy, you can add your own homebrew directly onto the server so that it is accessible to all users. (You must provide this content.) &#xD;
@@ -53,6 +54,7 @@ For homebrew content add the below line to the Advanced tab when creating your p
 &#xD;
 You will then need to add your homebrew to wherever you map "/usr/share/nginx/html/homebrew" as a file named "homebrew.orcbrew"&#xD;
 &#xD;
+Find my template on Github. https://github.com/mrcory/Unraiad_Docker_Templates&#xD;
 &#xD;
 Standalone version of orcpub, as a java jar   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Description>
   <Networking>
