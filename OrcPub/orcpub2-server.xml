@@ -29,7 +29,7 @@ Find my template on Github. https://github.com/mrcory/Unraiad_Docker_Templates&#
 &#xD;
 Standalone version of orcpub, as a java jar   Converted By Community Applications   Always verify this template (and values) against the dockerhub support page for the container</Overview>
   <Category/>
-  <WebUI/>
+  <WebUI>http://[IP]:[PORT:8890]</WebUI>
   <TemplateURL/>
   <Icon>https://raw.githubusercontent.com/mrcory/Unraiad_Docker_Templates/master/orc-head.svg</Icon>
   <ExtraParams/>
