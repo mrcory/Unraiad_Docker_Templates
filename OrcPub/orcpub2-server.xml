@@ -129,6 +129,16 @@ Standalone version of orcpub, as a java jar   Converted By Community Application
       <Name>EMAIL_ERRORS_TO</Name>
       <Mode/>
     </Variable>
+	 <Variable>
+      <Value/>
+      <Name>SIGNATURE</Name>
+      <Mode/>
+    </Variable>
+    <Variable>
+      <Value/>
+      <Name>EMAIL_FROM_ADDRESS</Name>
+      <Mode/>
+    </Variable>
   </Environment>
   <Labels/>
   <Config Name="SMTP Server" Target="EMAIL_SERVER_URL" Default="" Mode="" Description="Container Variable: EMAIL_SERVER_URL:" Type="Variable" Display="always" Required="false" Mask="false"/>
@@ -144,4 +154,6 @@ Standalone version of orcpub, as a java jar   Converted By Community Application
   <Config Name="Server Internal Port" Target="PORT" Default="8890" Mode="" Description="Container Variable: PORT" Type="Variable" Display="always" Required="false" Mask="false">8890</Config>
   <Config Name="Datomic host IP address" Target="ALT_HOST" Default="" Mode="" Description="Container Variable: ALT_HOST" Type="Variable" Display="always" Required="false" Mask="false"/>
   <Config Name="Error Email" Target="EMAIL_ERRORS_TO" Default="" Mode="" Description="Email to send errors to" Type="Variable" Display="always" Required="false" Mask="false"/>
+  <Config Name="Password Hash Secret" Target="SIGNATURE" Default="" Mode="" Description="The Secret used to hash your password in the browser, 20+ characters recommended" Type="Variable" Display="always" Required="false" Mask="true"/>
+  <Config Name="Email From" Target="EMAIL_FROM_ADDRESS" Default="" Mode="" Description="Email address to send from, will default to 'no-reply@orcpub.com'" Type="Variable" Display="always" Required="false" Mask="false"/>
 </Container>
